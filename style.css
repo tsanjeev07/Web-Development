@@ -1,1 +1,168 @@
-hello
+:root {
+  --bg: #0b1220;
+  --surface: #111a2b;
+  --text: #e8eefc;
+  --muted: #b8c3df;
+  --accent: #3ddc97;
+  --accent-dark: #28b67a;
+  --card: #1a2740;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(rgba(11, 18, 32, 0.8), rgba(11, 18, 32, 0.95)),
+    radial-gradient(circle at top right, #274e8b 0%, #0b1220 60%);
+  padding-bottom: 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+}
+
+.hero-content {
+  padding: 4rem 0 2rem;
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #072011;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: var(--accent-dark);
+}
+
+.cta.small {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.link-btn {
+  display: inline-block;
+  border: 1px solid #3a4f77;
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+}
+
+.section {
+  padding: 3.6rem 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #29395c;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.card h4 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.muted {
+  background: var(--surface);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.split ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.join {
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid #263756;
+  text-align: center;
+  padding: 1rem 0 1.6rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding-top: 2.5rem;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+}
